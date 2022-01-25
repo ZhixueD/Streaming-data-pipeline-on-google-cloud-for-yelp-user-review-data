@@ -23,6 +23,29 @@ The whole project include:
 8. Start publish the review data to Pub/Sub
 9. Launch Dataflow Pipeline
 
+## 1. Install python packages using VM instance
+In the Console, on the Navigation menu, click Compute Engine > VM instances.
+Create a VM instance, region is 'europe-north1'.
+
+![VM](https://user-images.githubusercontent.com/98153604/151070388-7719bb62-52c4-410e-9c2c-3029f64e58eb.JPG)
+
+On the far right, under Connect, click on SSH to open a terminal window.
+
+Run CLI commands in VM instance to intall packages:
+      
+      sudo apt-get install python3-pip
+      sudo pip3 install google-cloud-pubsub==2.9.0
+      sudo pip3 install google-cloud-storage
+      sudo pip3 install gcsfs
+      sudo pip3 install apache-beam[gcp]
+      sudo pip3 install oauth2client==3.0.0
+      sudo pip3 install -U pip
+      
+## 2. prepare data, python file and create temp-folder in google cloud storage 
+Prepare data for publish in Google cloud storage, and also upload data publish python file and Dataflow pipeline python file into Google cloud storage, and create 
+
+
+
 
 
 
