@@ -15,11 +15,15 @@ In this project, I simulate yelp website which continuously collect million's us
 The whole project include:
 
 1. Install python packages using VM instance
-2. Prepare data for publish
-3. Create a Pub/Sub topic
-4. Simulate users's review data and publish it the Pub/Sub topic
-5. Create Bigquery dataset and table with data type
-6. Launch Dataflow Pipeline
+2. Prepare data for publish in Google cloud storage
+4. Create a Pub/Sub topic
+5. Create and download the JSON key of your SA. On the Service Account page
+6. Simulate users's review data and publish it the Pub/Sub topic
+7. Create Bigquery dataset and table with data type
+8. Start publish the review data to Pub/Sub
+9. Launch Dataflow Pipeline
+
+
 
 
 
