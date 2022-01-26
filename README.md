@@ -42,7 +42,13 @@ Run CLI commands in VM instance to intall packages:
       sudo pip3 install -U pip
       
 ## 2. prepare data, python file and create temp-folder in google cloud storage 
-Prepare data for publish in Google cloud storage, and also upload data publish python file and Dataflow pipeline python file into Google cloud storage, and create 
+(1). Prepare data for publishing in Google cloud storage.
+Here I choose data from my another project, that is the user review data from yelp website, it is already stored in google cloud storage.I will publish this data, 1message per 2 seconds.
+
+![data source](https://user-images.githubusercontent.com/98153604/151121168-13a120fb-7099-477a-afc2-fd5d4b63f8fc.JPG)
+
+(2). Upload  two python files to google cloud storage, yelp_dataflow_test.py for dataflow pipeline, yelp_publish_to_topic2.py for publish the data from google cloud storage to Pub/Sub topic.
+![cloud_storage](https://user-images.githubusercontent.com/98153604/151121881-b7e3909b-f529-410f-a2e4-0e91badafece.JPG)
 
 
 
