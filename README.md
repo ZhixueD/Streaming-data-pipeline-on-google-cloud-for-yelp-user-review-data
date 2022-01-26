@@ -16,12 +16,14 @@ The whole project include:
 
 1. Install python packages using VM instance
 2. Prepare data for publish in Google cloud storage, upload python file to GCS and create ad temp folder in GCS bucket
-4. Create a Pub/Sub topic
-5. Create and download the JSON key On your Service Account page
-6. Create Bigquery dataset and table with data type
-7. Copy json key file, 2 python file from google cloud storage to VM storage
-8. Simulate users's review data and publish it the Pub/Sub topic
-9. Launch Dataflow Pipeline
+3. Create a Pub/Sub topic
+4. Create and download the JSON key On your Service Account page
+5. Create Bigquery dataset and table with data type
+6. Copy json key file, 2 python file from google cloud storage to VM storage
+7. Simulate users's review data and publish it the Pub/Sub topic
+8. Launch Dataflow Pipeline
+9. Check dataflow console and Bigquery
+10. Tableau connect Bigquery for visulization in real time
 
 ## 1. Install python packages using VM instance
 In the Console, on the Navigation menu, click Compute Engine > VM instances.
@@ -54,23 +56,23 @@ Here I choose data from my another project, that is the user review data from ye
 
      yelp-streaming-pipeline/staging
 
-## 4. Create a Pub/Sub topic and subscription
+## 3. Create a Pub/Sub topic and subscription
 
 Create a Pub/Sub topic and choose create a default subscription in google Pub/Sub, name the topic: yelp_review
 ![topic](https://user-images.githubusercontent.com/98153604/151240661-3f2e65d4-249c-42a3-96fc-f97e3070ae97.JPG)
 
-## 5. Create and download the JSON key On your Service Account page
+## 4. Create and download the JSON key On your Service Account page
 
 This key will used later in python code, for python to connect your Pub/Sub topic, when you add a key in you IAM , service account. Add key, and a json file will be download,
 And this Json file is the key, be careful keep it. And upload it to Google cloud storage.
 ![key](https://user-images.githubusercontent.com/98153604/151241860-fb6d172a-a3e9-4e4e-bcd4-21dfa23c19a0.JPG)
 
-## 6. Create Bigquery dataset and table with data type
+## 5. Create Bigquery dataset and table with data type
 This table used for dataflow to load the streaming data into it in realtime.
 
 ![bigquery](https://user-images.githubusercontent.com/98153604/151242594-73276465-82d2-4ed9-a5c2-e2f3812d3695.JPG)
 
-## 7. Copy json key file, 2 python file from google cloud storage to VM storage
+## 6. Copy json key file, 2 python file from google cloud storage to VM storage
 
    gsutil cp gs://yelp-streaming-pipeline/yelp_publish_to_topic2.py yelp_publish_to_topic2.py
    
@@ -80,7 +82,7 @@ This table used for dataflow to load the streaming data into it in realtime.
 
 ![VM ls](https://user-images.githubusercontent.com/98153604/151244256-9d1ab835-c094-494c-95ff-13388ceb970d.JPG)
 
-## 8. Simulate users's review data and publish it the Pub/Sub topic
+## 7. Simulate users's review data and publish it the Pub/Sub topic
 
 run command line code:
       
@@ -128,7 +130,7 @@ The message start to publish:
 
 ![VM_topic_publish](https://user-images.githubusercontent.com/98153604/151245016-c429d90d-bfc4-4193-a02b-b1fc824e6743.JPG)
 
-## 9. Launch Dataflow Pipeline
+## 8. Launch Dataflow Pipeline
 
 This pipeline will connect Pub/Sub Topic yelp_review, collect message data,  remove one 'text' column, or other simple transform or cleaning, and load message data into Bigquery in realtime.
 
@@ -234,9 +236,17 @@ The result show:
 
 ![run_dataflowfile](https://user-images.githubusercontent.com/98153604/151248463-2d76c7a8-f70c-4178-bacb-4c68d6641fea.JPG)
 
+## 9. Check dataflow console and Bigquery
+
+dataflow shows the pipeline:
+
+![dataflow2](https://user-images.githubusercontent.com/98153604/151253854-a92aca66-2fe8-4f94-9f01-dcdaab42f06f.JPG)
+
 Go to Bigquery, and we can see Bigquery table 'yelp-review-test' grandually increase its size, the rows increase with the message publish to the Pub/Sub Topic, we can you bigquery to analyze the data, like check all the reviews for one specific business, or all the reviews from one users.
 
 ![bigquery3](https://user-images.githubusercontent.com/98153604/151249239-1bdb9382-9743-4a71-8c2e-d5f518b09910.JPG)
+
+## 10. Tableau connect Bigquery for visulization in real time
 
 We can also connect Tableau, to do visulization in real time, we can updata the visulization when we fresh the data source:
 
