@@ -74,11 +74,11 @@ This table used for dataflow to load the streaming data into it in realtime.
 
 ## 6. Copy json key file, 2 python file from google cloud storage to VM storage
 
-   gsutil cp gs://yelp-streaming-pipeline/yelp_publish_to_topic2.py yelp_publish_to_topic2.py
-   
-   gsutil cp gs://yelp-streaming-pipeline/yelp_dataflow_test.py yelp_dataflow_test.py
-   
-   gsutil cp gs://yelp-streaming-pipeline/token.json token.json
+         gsutil cp gs://yelp-streaming-pipeline/yelp_publish_to_topic2.py yelp_publish_to_topic2.py
+
+         gsutil cp gs://yelp-streaming-pipeline/yelp_dataflow_test.py yelp_dataflow_test.py
+
+         gsutil cp gs://yelp-streaming-pipeline/token.json token.json
 
 ![VM ls](https://user-images.githubusercontent.com/98153604/151244256-9d1ab835-c094-494c-95ff-13388ceb970d.JPG)
 
