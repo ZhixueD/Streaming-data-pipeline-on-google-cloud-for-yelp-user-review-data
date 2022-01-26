@@ -1,6 +1,6 @@
 # Build a streaming data pipeline on google cloud by using Pub/Sub, dataflow, apache beam, Bigquery, Tableau
 
-![dataflow pipeline model](https://user-images.githubusercontent.com/98153604/151060089-9ffaa826-fed6-44a1-b84f-b0c508050805.png)
+![dataflow pipeline model](https://user-images.githubusercontent.com/98153604/151255089-f9b80a65-5a40-4332-9817-2bbc2cf5e6dc.png)
 
 Streaming data pipelines, by extension, is a data pipeline architecture that handle millions of events at scale, in real time. That capability allows for applications, analytics, and reporting in real time. 
 
