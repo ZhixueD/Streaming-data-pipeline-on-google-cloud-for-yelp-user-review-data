@@ -234,6 +234,21 @@ The result show:
 
 ![run_dataflowfile](https://user-images.githubusercontent.com/98153604/151248463-2d76c7a8-f70c-4178-bacb-4c68d6641fea.JPG)
 
+Go to Bigquery, and we can see Bigquery table 'yelp-review-test' grandually increase its size, the rows increase with the message publish to the Pub/Sub Topic, we can you bigquery to analyze the data, like check all the reviews for one specific business, or all the reviews from one users.
+
+![bigquery3](https://user-images.githubusercontent.com/98153604/151249239-1bdb9382-9743-4a71-8c2e-d5f518b09910.JPG)
+
+We can also connect Tableau, to do visulization in real time, we can updata the visulization when we fresh the data source:
+
+![tableau](https://user-images.githubusercontent.com/98153604/151252777-7ef9bcb2-1075-44e0-ab75-113e15abed3c.JPG)
+
+This tableau figure show the top 20 business with highest review numbers, and also show their average stars given by users, which reflect if this business has more costomers and
+is it has a good service for customers.
+
+
+
+
+
 
 
 
