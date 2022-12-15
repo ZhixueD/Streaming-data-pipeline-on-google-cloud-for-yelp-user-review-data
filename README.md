@@ -242,7 +242,7 @@ dataflow shows the pipeline:
 
 Go to Bigquery, and we can see Bigquery table 'yelp-review-test' grandually increase its size, the rows increase with the message publish to the Pub/Sub Topic, we can you bigquery to analyze the data, like check all the reviews for one specific business, or all the reviews from one users.
 
-![bigquery3](https://user-images.githubusercontent.com/98153604/151249239-1bdb9382-9743-4a71-8c2e-d5f518b09910.JPG)
+![123](https://user-images.githubusercontent.com/98153604/207979999-0e1fea0e-98e1-49a9-8c28-dafe18867b2d.jpg)
 
 ## 10. Tableau connect Bigquery for visulization in real time
 
