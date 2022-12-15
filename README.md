@@ -27,9 +27,7 @@ The whole project include:
 
 ## 1. Install python packages using VM instance
 In the Console, on the Navigation menu, click Compute Engine > VM instances.
-Create a VM instance, region is 'europe-north1'.
-
-![VM](https://user-images.githubusercontent.com/98153604/151070388-7719bb62-52c4-410e-9c2c-3029f64e58eb.JPG)
+Create a VM instance.
 
 On the far right, under Connect, click on SSH to open a terminal window.
 
